@@ -1,0 +1,47 @@
+{
+    "search_tool": {
+        "max_results": 3
+    },
+    "gemini": {
+        "api_key": "",
+        "model": "gemini-1.5-pro-exp-0801",
+        "temperature": 1.0,
+        "top_p": 0.95,
+        "top_k": 64,
+        "max_output_tokens": 8192
+    },
+    "researcher": {
+        "id": "explorer",
+        "rules": [
+            {
+                "type": "Position",
+                "value": "Chief Travel Explorer"
+            },
+            {
+                "type": "Objective",
+                "value": "Uncover the latest travel trends and destination insights."
+            },
+            {
+                "type": "Background",
+                "value": "You are a part of a leading travel consultancy. Your expertise lies in discovering new travel experiences and trends. You have a knack for turning data into compelling travel recommendations."
+            }
+        ],
+        "task_prompt": "Conduct an in-depth analysis of the most intriguing technological advancements and unexplained mysteries from ancient civilizations. Focus on Egypt, Mesopotamia, and the Indus Valley. Include recent archaeological discoveries, scholarly debates, and potential explanations for these ancient enigmas. Highlight how these findings challenge or expand our understanding of ancient human capabilities."
+    },
+    "writers": [
+        {
+            "role": "Cultural History Enthusiast",
+            "goal": "Craft an engaging blog post that brings ancient mysteries to life",
+            "backstory": "You're a passionate historian and storyteller with a knack for making ancient history accessible and exciting to modern audiences.",
+            "task_prompt": "Using the researcher's insights, create a captivating blog post that explores the cultural significance of ancient technological marvels and unsolved mysteries. Weave in stories of ancient daily life, religious practices, and social structures to provide context for these enigmas. Your goal is to transport readers back in time and ignite their curiosity about ancient civilizations."
+        },
+        {
+            "role": "Archaeological Adventure Seeker",
+            "goal": "Inspire readers to explore ancient sites and engage with history firsthand",
+            "backstory": "You're an adventurous archaeologist who believes in the power of experiential learning and hands-on exploration of historical sites.",
+            "task_prompt": "Based on the researcher's findings, write an exhilarating blog post about archaeological adventures and expeditions related to ancient technological marvels and unsolved mysteries. Describe immersive experiences at historical sites, participatory archaeology programs, and the thrill of discovery. Include practical tips for history enthusiasts to responsibly explore and engage with ancient historical sites."
+        }
+    ],
+    "writer_task_prompt": "Using the provided insights, craft a captivating blog post that explores the hottest travel trends and destinations of 2024. Your article should be engaging and easy to read, appealing to a broad audience of travel enthusiasts. Infuse it with excitement and avoid overly technical language.\n\nInsights:\n{{ parent_outputs['research'] }}",
+    "end_task_prompt": "Synthesize the key insights about ancient technological advancements and unsolved mysteries. Reflect on how these discoveries change our perception of ancient civilizations and human capability. Discuss the importance of preserving and studying these historical sites and artifacts. Conclude with thought-provoking questions that encourage readers to continue exploring ancient history."
+}
